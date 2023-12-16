@@ -1,0 +1,18 @@
+name: Deploy to PROD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: [prod]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and Deploy
+        run: |
+          cd /home/actions-runner/prod/wind/wind
+          sudo docker-compose up --build -d
