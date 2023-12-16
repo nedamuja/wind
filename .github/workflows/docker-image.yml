@@ -16,5 +16,5 @@ jobs:
         run: |
           cd /home/actions-runner/prod/wind/wind
           mv ./testtt.csv ./small_testtt.csv
-          mv /home/big_testtt.csv ./testtt.csv
+          cp /home/big_testtt.csv ./testtt.csv
           sudo docker-compose up --build -d
