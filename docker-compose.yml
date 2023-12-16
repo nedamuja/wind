@@ -8,11 +8,11 @@ services:
       dockerfile: ./Dockerfile
       context: .
     volumes:
-      - ./web_neda/testtt.csv:/code/testtt.csv
-      - ./web_neda/substationsPowesAlti.csv:/code/substationsPowesAlti.csv
-      - ./web_neda/power_curves.csv:/code/power_curves.csv
-      - ./web_neda/ex-substations.geojson:/code/ex-substations.geojson
-      - ./web_neda/existing-transmission-lines.geojson:/code/existing-transmission-lines.geojson
+      - ./testtt.csv:/code/testtt.csv
+      - ./substationsPowesAlti.csv:/code/substationsPowesAlti.csv
+      - ./power_curves.csv:/code/power_curves.csv
+      - ./ex-substations.geojson:/code/ex-substations.geojson
+      - ./existing-transmission-lines.geojson:/code/existing-transmission-lines.geojson
 
   nginx:
     image: nginx:latest
