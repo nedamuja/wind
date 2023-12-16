@@ -1,0 +1,10 @@
+dash==2.14.2
+dash_bootstrap_components==1.5.0
+geopandas==0.13.2
+numpy==1.22.3
+pandas==2.0.3
+plotly==5.18.0
+pyproj==3.5.0
+scikit_learn==1.3.0
+Shapely==2.0.2
+tqdm==4.66.1
