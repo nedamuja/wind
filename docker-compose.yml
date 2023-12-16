@@ -13,6 +13,11 @@ services:
       - ./power_curves.csv:/code/power_curves.csv
       - ./ex-substations.geojson:/code/ex-substations.geojson
       - ./existing-transmission-lines.geojson:/code/existing-transmission-lines.geojson
+    deploy:
+      resources:
+        limits:
+          cpus: '0.99'  # Use half of available CPU cores
+          memory: '16G'  # Use 2 GB of RAM
 
   nginx:
     image: nginx:latest
@@ -21,10 +26,8 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - ./ssl_cert/fullchain.pem:/etc/nginx/ssl/codewithneda.crt
       - ./ssl_cert/privkey.pem:/etc/nginx/ssl/codewithneda.key
-
     ports:
       - 80:80
       - 443:443
     depends_on:
       - web_neda
-    
