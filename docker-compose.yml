@@ -5,7 +5,7 @@ services:
     ports:
       - 122:8080
     build:
-      dockerfile: ./web_neda/Dockerfile
+      dockerfile: ./Dockerfile
       context: .
     volumes:
       - ./web_neda/testtt.csv:/code/testtt.csv

@@ -12,12 +12,12 @@ RUN apt-get update
 RUN apt-get install -y gdal-bin libgdal-dev g++
 
 
-COPY ./web_neda/requirements.txt /code/requirements.txt
+COPY ./requirements.txt /code/requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Copy the rest of your application
-COPY ./web_neda/app.py /code/app.py
+COPY ./app.py /code/app.py
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
