@@ -17,7 +17,7 @@ services:
       resources:
         limits:
           cpus: '0.99'  # Use half of available CPU cores
-          memory: '16G'  # Use 2 GB of RAM
+          memory: '16G'  # Use 2 GB of RAM changes from flori
 
   nginx:
     image: nginx:latest
